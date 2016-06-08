@@ -10,7 +10,7 @@ var conduct = {
       m('.card-block',
         m('p', 'To contribute to Nike open-source projects you must accept and submit a Contributors License Agreement (CLA).'),
         m('a.btn.btn-primary', {
-          href: 'CLA.md',
+          href: 'https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CLA.md',
           target: '_blank'
         }, 'VIEW')
       )

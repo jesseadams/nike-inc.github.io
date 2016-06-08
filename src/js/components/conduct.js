@@ -10,7 +10,7 @@ var conduct = {
       m('.card-block',
         m('p', 'Our Open Source Code of Conduct outlines the standards for acceptable behavior.'),
         m('a.btn.btn-primary', {
-          href: 'CONDUCT.md',
+          href: 'https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md',
           target: '_blank'
         }, 'VIEW')
       )
