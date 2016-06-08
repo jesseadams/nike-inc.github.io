@@ -1,0 +1,371 @@
+/*body {
+    background-color: #FFFFFF;
+    font-family: 'TradeGothicW01-BoldCn20 675334', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}*/
+
+#header {
+  position: relative;
+  width: 100%;
+  background: #111111;
+}
+.banner img {
+  width: 50%;
+  height: 50%;
+  max-width: 1600px;
+  max-height: 550px;
+}
+.banner .topleft img {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  right: -90%;
+  transform: translate(-50%, -50%);
+  max-width: 78px;
+  max-height: 51px;
+}
+.banner .topright img {
+  position: absolute;
+  top: 60px;
+  left: 90%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  max-width: 78px;
+  max-height: 51px;
+}
+.message-centered {
+  margin: auto;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+}
+#content {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  min-height: 500px;
+}
+#side-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  margin: 20px 0 0 0;
+  border-radius: 0 15px 15px 0;
+  background: #BADA55;
+}
+.sbcategory {
+  overflow: auto;
+  min-width: 150px;
+  margin: 0 10px 0 10px;
+  border-radius: 30px 15px;
+  background: #BADA55;
+}
+.sbcategory .sbtitle {
+  text-align: left;
+  color: #111111;
+  font-size: 24px;
+  margin: 15px 0 5px 15px;
+}
+.sbcategory .sbname {
+  text-align: left;
+  color: #999999;
+  font-size: 14px;
+  margin: 0 0 2px 35px;
+}
+#long-scroll {
+  position: relative;
+  /* padding: 0 0 0 160px;       /* if sidebar */
+}
+.category {
+  overflow: hidden;
+  margin: 0 0 0 0;
+  padding: 0 2% 0 2%;
+}
+.category .title {
+  text-align: center;
+  color: #111111;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 70px 0 60px 0;
+}
+.category .title .count {
+  color: #999999;
+}
+.category .wrapper {
+  margin: auto;
+  max-width: 1172px;
+}
+
+/*****  3 per row  *****/
+
+.category .item {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 32%;
+  min-height: 350px;
+  text-align: left;
+  margin: 15px 0 15px 2%;
+  padding: 0 0 10px 0;
+}
+.category .item:nth-child(3n+1) {
+  margin-left: 0;
+}
+.category .item img {
+  width: 100%;
+}
+.category .item img:hover {
+  opacity: 0.7;
+}
+.category .item .name {
+  text-align: left;
+  color: #111111;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+}
+.category .item .description {
+  max-width: 375px;
+  color: #888888;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0 0 0 0;
+}
+.category .item .description .released {
+  color: #111111;
+  font-weight: bold;
+}
+.category .item .social {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0 5px 0 0;
+  padding: 0 0 10px 0;
+}
+.category .item .social img {
+  float: right;
+  max-width: 20px;
+  max-height: 20px;
+}
+.category .item .subhline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: #999999;
+  margin: 5px 0 0 0;
+}
+
+/*****  2 per row  *****/
+
+@media (max-width: 768px) {
+  .category .item {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 49%;
+    min-height: 350px;
+    margin: 15px 0 15px 2%;
+  }
+  .category .item:nth-child(3n+1) {
+    margin-left: 2%;
+  }
+  .category .item:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .category .item img {
+    width: 100%;
+  }
+  .category .item img:hover {
+    opacity: 0.7;
+  }
+  .category .item .name {
+    text-align: left;
+    color: #111111;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px 0 30px 5px;
+  }
+  .category .item .description {
+    max-width: 375px;
+    color: #888888;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 0;
+  }
+  .category .item .description .released {
+    color: #111111;
+    font-weight: bold;
+  }
+  .category .item .social {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 5px 0 0;
+    padding: 0 0 10px 0;
+  }
+  .category .item .social img {
+    float: right;
+    max-width: 20px;
+    max-height: 20px;
+  }
+  .category .item .subhline {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: #999999;
+    margin: 5px 0 0 0;
+  }
+}
+
+
+/*****  Footer  *****/
+
+.nike-cq-global-footer-2 {
+  background-color: #191919;
+  clear: both
+}
+.nike-cq-global-footer-2-wrapper {
+  padding: 42px 42px 0;
+  min-width: 684px;
+  max-width: 940px;
+  margin: 0 auto;
+  color: #999
+}
+.nike-cq-global-footer-2-column-container {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top
+}
+.nike-cq-global-footer-column {
+  min-width: 140px;
+  margin-right: 20px;
+  float: left
+}
+.nike-cq-global-footer-column>li {
+  height: 28px
+}
+.nike-cq-global-footer-column li:last-child {
+  height: auto
+}
+.nike-cq-global-footer-column-right {
+  float: none;
+  margin-right: 0;
+  text-align: right
+}
+.nike-cq-global-footer-2-wrapper a {
+  text-decoration: none
+}
+span.nike-cq-global-footer-2-social-wrapper {
+  position: relative
+}
+.nike-cq-global-footer-2-wrapper a, .nike-cq-global-footer-2-wrapper a:visited, .nike-cq-global-footer-title a:hover, .nike-cq-global-footer-title a.is-hover, .nike-cq-global-footer-locale a:hover, .nike-cq-global-footer-locale a.is-hover, .nike-cq-global-footer-title a:active, .nike-cq-global-footer-title a.is-active, .nike-cq-global-footer-title a:focus, .nike-cq-global-footer-locale a:active, .nike-cq-global-footer-locale a.is-active, .nike-cq-global-footer-locale a:focus {
+  color: #999;
+  outline: 0
+}
+.nike-cq-global-footer-2-wrapper a:hover, .nike-cq-global-footer-2-wrapper a.is-hover, .nike-cq-global-footer-2-wrapper a:active, .nike-cq-global-footer-2-wrapper a.is-active, .nike-cq-global-footer-2-wrapper a:focus, .nike-cq-global-footer-column .nike-cq-global-footer-title, .nike-cq-global-footer-title a, .nike-cq-global-footer-title a:visited, .nike-cq-global-footer-locale a, .nike-cq-global-footer-locale a:visited {
+  color: #FFF
+}
+.nike-cq-global-footer-2-wrapper a:active {
+  background-color: transparent
+}
+.nike-cq-global-footer-title {
+  font-size: .875em
+}
+.nike-cq-global-footer-link {
+  font-size: .688em;
+  padding-top: 3px;
+  margin-bottom: -3px
+}
+.nike-cq-global-footer-bottom-container {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0 0 0;
+  border-top: 1px solid #444;
+  margin-top: 42px;
+  vertical-align: top
+}
+.nike-cq-global-footer-bottom-container {
+  font-size: .625em
+}
+.nike-cq-global-footer-bottom-column-left>li {
+  float: left
+}
+.nike-cq-global-footer-bottom-column-right {
+  float: none;
+  text-align: right;
+  margin: -6px 0 6px 0
+}
+.nike-cq-global-footer-bottom-column>li {
+  padding: 0 12px 0 0
+}
+.nike-cq-global-footer-bottom-column-right .nike-cq-global-footer-terms {
+  display: inline
+}
+.nike-cq-global-footer-bottom-column-right>div.global-footer-2-menu, .nike-cq-global-footer-bottom-column-right div>span {
+  padding: 0 0 0 15px;
+  white-space: nowrap
+}
+.nike-cq-global-footer-bottom-column>div:last-child {
+  padding-right: 0
+}
+span.nike-cq-global-footer-terms-link {
+  line-height: 26px
+}
+span.nike-cq-global-footer-terms-link:first-child {
+  padding-left: 0
+}
+.nike-cq-global-footer-social-container {
+  font-size: 0;
+  margin-top: -7px;
+  margin-right: -7px;
+  text-align: right
+}
+.nike-cq-global-footer-social-container a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+.nike-cq-global-footer-social-container a span {
+  font-size: 37px;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased
+}
+.nike-cq-global-footer-social-container a span:hover {
+  color: #FFF
+}
+
+.card-img-top-project {
+  text-align: center;
+  vertical-align: middle;
+  /*width: 175px;
+  height: 175px;
+  min-width: 175px;
+  min-height: 175px;*/
+  margin-bottom: 15px;
+}
+
+.card-img-top-contributor {
+  width: 50px;
+}
+
+.card-block-project {
+  min-height: 138px;
+}
+
+.content-text-block {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+footer {
+  margin-top: 50px;
+}
