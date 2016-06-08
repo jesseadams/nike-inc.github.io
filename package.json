@@ -1,0 +1,56 @@
+{
+  "name": "nike-inc.github.io",
+  "version": "1.0.3",
+  "description": "Nike Open Source Software Github Page",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -f dist/{css/*,js/*,img/*}",
+    "build-all": "npm run build-js && npm run build-sass",
+    "build-min-all": "npm run build-min-js && npm run build-min-sass",
+    "build-js": "browserify src/js/app.js -o dist/js/app.js",
+    "build-sass": "node-sass --include-path node_modules/bootstrap-material-design/node_modules src/scss/main.scss dist/css/main.css",
+    "build-min-js": "browserify src/js/app.js | uglifyjs -o dist/js/app.min.js",
+    "build-min-sass": "node-sass --include-path node_modules/bootstrap-material-design/node_modules src/scss/main.scss src/css/main.css && cat src/css/*.css | cleancss -o dist/css/main.min.css",
+    "watch-js": "onchange 'src/js/**/*.js' -- npm run build-min-js",
+    "watch-sass": "onchange 'src/scss/**/*.scss' 'src/css/**/*.css' -e 'src/css/main.css' -- npm run build-min-sass",
+    "dev": "npm-run-all -p build-n-serve watch-sass watch-js",
+    "serve": "http-server -c-1 -o",
+    "build-n-serve": "npm run build-min-all && npm run serve",
+    "postinstall": "cd node_modules/bootstrap-material-design && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nike-inc/nike-inc.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nike-inc/nike-inc.github.io/issues"
+  },
+  "homepage": "https://github.com/nike-inc/nike-inc.github.io#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.1",
+    "clean-css": "^3.4.13",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "npm-run-all": "^1.5.1",
+    "onchange": "^2.0.0",
+    "uglify-js": "^2.6.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "dependencies": {
+    "bootstrap-material-design": "github:fezvrasta/bootstrap-material-design#v4-dev",
+    "github-api": "^2.1.0",
+    "mithril": "^0.2.5"
+  },
+  "browserify": {
+    "babelify": {
+      "presets": [
+        "es2015"
+      ]
+    }
+  }
+}
