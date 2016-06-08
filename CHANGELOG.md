@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.0.4 - 2016/06/08
+### Fixes
+* Fixed links to markdown files
+* Overriding projects identified by Github as CSS to JavaScript
+
 ## 1.0.3 - 2016/06/08
 ### Features
 * ADDED listing of Repositories
