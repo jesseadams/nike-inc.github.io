@@ -17,7 +17,7 @@ function renderCards(repo) {
   if (!repo) { return; }
 
   repo.language = repo.language === 'CSS' ? 'JavaScript' : repo.language;
-  
+
   var labelLanguage = label[repo.language] || '.label-default';
 
   return repo ? m('.card.col-sm-6.col-md-5.col-lg-4.col-xl-3', [
@@ -70,6 +70,7 @@ var repositories = {
           .then(function(res) {
             var members = res.data;
              ctrl.contributors = members;
+             m.redraw(true);
           }).catch(function(err) {
             console.log('catch', err);
           });
